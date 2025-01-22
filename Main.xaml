@@ -1,0 +1,986 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Semantic.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1328,9147" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="1328,9124" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="file_path" />
+        <Variable x:TypeArguments="sd:DataTable" Name="sheet1" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="1294,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[file_path]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\ADMIN\Desktop\EVEREST REFERRING PROVIDER INPUT FILE 12102024.xlsx</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[sheet1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1294,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[file_path]">
+        <ui:ReadRange.Range>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </ui:ReadRange.Range>
+      </ui:ReadRange>
+      <ui:WriteCell WorkbookPathResource="{x:Null}" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_1" WorkbookPath="[file_path]">
+        <ui:WriteCell.Cell>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">D1</Literal>
+          </InArgument>
+        </ui:WriteCell.Cell>
+        <ui:WriteCell.SheetName>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">Sheet1</Literal>
+          </InArgument>
+        </ui:WriteCell.SheetName>
+        <ui:WriteCell.Text>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">Address 1</Literal>
+          </InArgument>
+        </ui:WriteCell.Text>
+      </ui:WriteCell>
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="E1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Sheet1" Text="Address 2" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="F1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="City" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="G1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Sheet1" Text="State" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="H1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet1" Text="Zip" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="I1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet1" Text="Phone number" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="J1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Sheet1" Text="Fax number" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="K1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Sheet1" Text="Speciality" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="L1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="Sheet1" Text="Taxonomy" WorkbookPath="[file_path]" />
+      <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="M1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="1294,148" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="Sheet1" Text="Ref prov code" WorkbookPath="[file_path]" />
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[sheet1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1294,7327" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="756,7740" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="Ref_Id" />
+                <Variable x:TypeArguments="x:Int32" Name="colnumber" />
+                <Variable x:TypeArguments="x:String" Name="url" />
+                <Variable x:TypeArguments="x:String" Name="Jstring" />
+                <Variable x:TypeArguments="njl:JObject" Name="Jout" />
+                <Variable x:TypeArguments="x:String" Name="postalCode" />
+                <Variable x:TypeArguments="x:String" Name="telephone" />
+                <Variable x:TypeArguments="x:String" Name="fax" />
+                <Variable x:TypeArguments="x:String" Name="address" />
+                <Variable x:TypeArguments="x:String" Name="address2" />
+                <Variable x:TypeArguments="x:String" Name="city" />
+                <Variable x:TypeArguments="x:String" Name="state" />
+                <Variable x:TypeArguments="x:String" Name="taxcode" />
+                <Variable x:TypeArguments="x:String" Name="taxdesc" />
+                <Variable x:TypeArguments="x:String" Name="Ref_Name" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If Condition="[CurrentRow(3).ToString() = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="722,7680" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="688,7430" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Ref_Id]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Ref_Name]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[colnumber]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(sheet1.Rows.IndexOf(CurrentRow)) + 2]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[colnumber]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <Assign sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">["https://npiregistry.cms.hhs.gov/api/?number="+Ref_Id+"&amp;version=2.1"]</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[url]" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[Jstring]" TimeoutMS="6000">
+                      <ui:HttpClient.Attachments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Attachments>
+                      <ui:HttpClient.Cookies>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Cookies>
+                      <ui:HttpClient.Headers>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Headers>
+                      <ui:HttpClient.Parameters>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.Parameters>
+                      <ui:HttpClient.UrlSegments>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                      </ui:HttpClient.UrlSegments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:HttpClient>
+                    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[Jout]" JsonString="[Jstring]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:DeserializeJson>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[postalCode]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("addresses").
+             Where(Function(addr) addr("address_purpose").ToString = "LOCATION").
+             Select(Function(addr) addr("postal_code").ToString).
+             FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[telephone]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("addresses").
+             Where(Function(addr) addr("address_purpose").ToString = "LOCATION").
+             Select(Function(addr) addr("telephone_number").ToString).
+             FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[fax]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[If(Jout("results")(0)("addresses").Where(Function(addr) addr("address_purpose").ToString = "LOCATION").Select(Function(addr) If(addr("fax_number") IsNot Nothing, addr("fax_number").ToString, "")).FirstOrDefault() IsNot Nothing, Jout("results")(0)("addresses").Where(Function(addr) addr("address_purpose").ToString = "LOCATION").Select(Function(addr) If(addr("fax_number") IsNot Nothing, addr("fax_number").ToString, "")).FirstOrDefault(), "")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("addresses").
+             Where(Function(addr) addr("address_purpose").ToString = "LOCATION").
+             Select(Function(addr) addr("address_1").ToString).
+             FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[address2]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[If(Jout("results")(0)("addresses").Where(Function(addr) addr("address_purpose").ToString = "LOCATION").Select(Function(addr) If(addr("address_2") IsNot Nothing, addr("address_2").ToString, "")).FirstOrDefault() IsNot Nothing, Jout("results")(0)("addresses").Where(Function(addr) addr("address_purpose").ToString = "LOCATION").Select(Function(addr) If(addr("address_2") IsNot Nothing, addr("address_2").ToString, "")).FirstOrDefault(), "")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[city]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("addresses").
+             Where(Function(addr) addr("address_purpose").ToString = "LOCATION").
+             Select(Function(addr) addr("city").ToString).
+             FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[state]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("addresses").
+             Where(Function(addr) addr("address_purpose").ToString = "LOCATION").
+             Select(Function(addr) addr("state").ToString).
+             FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[taxcode]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("taxonomies").
+                      Where(Function(tax) tax("primary").ToObject(Of Boolean) = True).
+                      Select(Function(tax) tax("code").ToString).
+                      FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[taxdesc]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[Jout("results")(0)("taxonomies").
+                      Where(Function(tax) tax("primary").ToObject(Of Boolean) = True).
+                      Select(Function(tax) tax("desc").ToString).
+                      FirstOrDefault()]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MultipleAssign>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;D&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="Sheet1" Text="[address]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;E&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="WriteCell_12" SheetName="Sheet1" Text="[address2]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;F&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_13" SheetName="Sheet1" Text="[city]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;G&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_14" SheetName="Sheet1" Text="[state]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;H&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_15" SheetName="Sheet1" Text="[postalCode]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_16" SheetName="Sheet1" Text="[telephone]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;J&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_17" SheetName="Sheet1" Text="[fax]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;K&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_18" SheetName="Sheet1" Text="[taxdesc]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;L&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteCell_19" SheetName="Sheet1" Text="[taxcode]" WorkbookPath="[file_path]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:WriteCell>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AMD_Login - Invoke Workflow File (AMD_Login.xaml)" sap:VirtualizedContainerService.HintSize="654,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AMD_Login.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_AMD_URL">https://login.advancedmd.com/</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Visit_ID" />
+                        <InArgument x:TypeArguments="x:String" x:Key="in_AR_Comments" />
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Status" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InvokeWorkflowFile>
+                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Referring'" sap:VirtualizedContainerService.HintSize="654,5707" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="619d84046dcfe23a66de951441e65e73" Selector="&lt;html app='chrome.exe' htmlwindowname='pm' title='AdvancedMD PM - EVEREST DIAGNOSTICS LLC 160112 SASI_NEI' /&gt;">
+                      <ui:BrowserScope.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="620,5537" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: AdvancedMD PM - EVEREST DIAGNOSTICS LLC 160112 SASI_NEI" sap:VirtualizedContainerService.HintSize="586,754" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="c1f90361-842d-45bc-a152-95d4cbe4d190" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,505" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'System Settings'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1f90361-842d-45bc-a152-95d4cbe4d190" Version="V4">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" CVScreenId="15cf25e5-8a71-4ced-b20a-f6d87ce3b381" CvTextArea="1065, 70, 104, 16" CvTextArgument="System Settings" CvType="Text" DesignTimeRectangle="1052, 66, 131, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='System Settings' class='dropdown-toggle' parentid='amds-navbar' tag='A' type='' check:innerText='System Settings' /&gt;" Guid="f1f474ff-e9e7-4bbc-af1c-2dd8fffbe474" InformativeScreenshot="358b3f85e825d687cc1a1f6cf63d6785.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='pm' title='AdvancedMD PM - EVEREST DIAGNOSTICS LLC 160112 SASI_NEI' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Referring Providers'" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1f90361-842d-45bc-a152-95d4cbe4d190" Version="V4">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" CVScreenId="1c227883-850c-454b-a82a-319e8416b1e1" CvTextArea="1072, 695, 127, 17" CvTextArgument="Referring Providers" CvType="Text" DesignTimeRectangle="1052, 691, 200, 23" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Referring Providers' type='' parentid='amds-navbar' tag='A' class='' check:innerText='Referring Providers' /&gt;" Guid="2c83c5ac-db94-49b8-b9ca-7ebc2d85b65d" InformativeScreenshot="8e0f28623a82bf00afb2a58856cfaf78.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='pm' title='AdvancedMD PM - EVEREST DIAGNOSTICS LLC 160112 SASI_NEI' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUpSURBVGhD7VlpiBxFFG7vA8+YZHe6ag8Xj2gERRFEFEUJeGE8EsWDRbM7PT27iaJEvBBFJCr6JyIqiEpAJVFBERRdIYhRPDA/DBqjQTEoRlCD7EoSPPL83us340x17czObM/MLuSDj+mpeld1vTo7oNhcRlG4IJitoKI5iwrmL/AXcC1FpkgjuZO0enYAPTCK4MkhN2gdOEgj8w5T0ZkLKoQvVgTv8k9wDdLtAgqCfVRlZgG9cCga8aUTuI/bkGYPUcEer6ozB2jEOZ6Aa9B+gEYvUvWZAQTGee8JtiY3UGzPVxOdBY3m+hDQLifAqXI996Ka6hwQyConsAZp36W45xQ1135Q3N3vD6wh7kZv3EEPBPuq2brgGS5Zl8Lr8BJuxO+1NGysVjcGTJmfeYJqghjow13HqlkvKG9OozhcDfkf0/pgZDajfjmtOO4gVakPeXs+Y81xnCI7rKbL4BUfdRsc2Vr8CbxQ1WsjozRyaF+n2+whYr/YezTKfkvL1OU/SK2VEmQ9QHijo5wBkVIr5hyR2LcXoWx3WmZKXEdLFx4ogU4GdPujHsUMaD+nUXOM+JheI9ZKoJNBc/RTRykj2q9oeU8ofpprxLdIpUck0HrALHApFFqQTuY7GunvFh+xvdJTX83IbAXvo3zvQgmsUWBmugIGvvAab5rhO6UdLv6vSdeLDDaZWBuWBvtJII2AhuwcfRTIYlMwSxKjPmdNMLK3iO1kZvrZqXuukcUwBRjB/sY8466IbFTeSsFsqXLYHHeVth5UDC+vKH962ucPGHlVjWGQhU9Q1JfTKgEasj9WyYdRv0flmiOnpq60+M8+v2lo5Z0MEnS1s53YZjxON3fPUxEB5Bahjo+hlbKNcjCxxbNSRucMGL3bcVIijpn2zsoupuH5XSgfc+Smzti8L3ammzaVQJCR19n/HOPAVTwZ5JG9C+V/O3JT4R4M5AE1lQ2Qm/d4HLlE6lR3uWyLI/ODR7Y2Y/OgmsgGMPiU11GaPIhX8aBW1YDHCRqx2ZGrx02qng1g8E3HQW3G5iO6qf8oVUcP9uXQiK1eWR/Ra6qaDWD0k5ST+hyr6oko7EWKbffIeRhuV7VswLtGDOTHYHxn2lkt2ifVhACBLfbLpbhDVbIF7xx1PPA9qs+xh+GIqgvQqJf9clWcUPHWgM+3cDLVccFTafkIKC9BTlRe2RLHVLy1wPZhGZyNO8593KgqAvx/y6l3Gato6yHnZqyeniBcnqoqGND2ek99iRPuFqXl0O31804gDsMhFQ8ob8/zy4CxuVfF2gs+aGCAvuENihmFoyqKBvSc6ZUp2O+xfhysYu1D6WsOO0cgH6YDA/Ph2SIM4OiY98hMgOU0axs0mN/5Qlj/X10RVIkfizCg6fa1U49ZyV6iIu0DFbpPhnNd3JLbAaTKXPx3DzZLRAHANoEvByrr/sCYuFir2wdNl03lQOLwJSmXYyZ6pFyOGUoP4rJ+VO9Ot+D4eCLXtR26IpcCKed41RuOzdsV14gDKNumdb+Ct3dkwDKQr1dpICW+IOUIFs/Jxi82r1B0xgFSnny24lvncTzfT8vmHs7lHYFe+O6QIJn8sY8HZpJSfJTEWw6HJJWSLQcfzpMzNMaHmukM5HDCNwUF8y8Cf62cNvzpNTbvoWdu5VsEBLoAjViJcfEsZAcp7povBjoJ/tCNYNYjqNXyZnnhko8S5hpMnTfIYT5vTqBi7tymr/1aCbzV0ykaOFKeOdd5V1lxc8Apo497sRezC0HwHwJ79ZKAOqs1AAAAAElFTkSuQmCC" InformativeScreenshot="9d5b2bb25b49b8f665f52b85270fd78d.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='pm' title='AdvancedMD PM - EVEREST DIAGNOSTICS LLC 160112 SASI_NEI' /&gt;" Title="Referring Provider" Url="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" />
+                              </uix:NApplicationCard.TargetApp>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NApplicationCard>
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'chrome.exe Referring'" sap:VirtualizedContainerService.HintSize="586,4723" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="81fe201a53e7f3e535db7ab159635ba8" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Referring Provider - Google Chrome' /&gt;">
+                              <ui:WindowScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4553" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Referring Provider" sap:VirtualizedContainerService.HintSize="518,4493" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="a207182e-8328-4ca0-94e5-3bf1258e45dc" Version="V2">
+                                      <uix:NApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,4253" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:Boolean" Name="validate_City" />
+                                              <Variable x:TypeArguments="x:Boolean" Name="checkcity" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[address]" Version="V4">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvElementArea="95, 144, 346, 20" CvType="InputBox" DesignTimeRectangle="95, 144, 345, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtAddress2' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="f5d365d3-c4af-4376-bba4-eba818482db8" InformativeScreenshot="dec41e3769ab64a271095c3d486881d4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvTextArea="24, 146, 44, 11" CvTextArgument="Address:" CvType="Text" DesignTimeRectangle="25, 144, 43, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Address:' parentid='spnAfterName' tag='LABEL' type='' class='' check:innerText='Address:' /&gt;" Guid="83db91bd-198e-4711-b13c-97fdf1d3c646" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Apt / Ste #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[address2]" Version="V4">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvElementArea="95, 121, 346, 20" CvType="InputBox" DesignTimeRectangle="95, 122, 345, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtAddress1' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="792f5b0e-9248-486e-888e-ce9e16b96096" InformativeScreenshot="3367dd524de6cf77280e8edca7905faa.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvTextArea="24, 124, 55, 13" CvTextArgument="Apt / Ste #:" CvType="Text" DesignTimeRectangle="25, 122, 54, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='spnAfterName' tag='LABEL' type='' class='' aaname='Apt / Ste #:' check:innerText='Apt / Ste #:' /&gt;" Guid="b0a5be11-be61-448e-87c2-10089e491876" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Office'" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_23" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[telephone]" Version="V4">
+                                              <uix:NTypeInto.EmptyFieldMode>
+                                                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                                                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="SingleLine" />
+                                                </InArgument>
+                                              </uix:NTypeInto.EmptyFieldMode>
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/amds/pm/app/index.html#/" CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvElementArea="95, 187, 106, 20" CvType="InputBox" DesignTimeRectangle="95, 188, 105, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtOffice' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="cadfb2f4-1c34-4bbf-860c-06c7b1899a7b" InformativeScreenshot="c0504b8e80e8f7ca446a2ebdf5d422b6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="8cbed71f-1377-40e5-b4b7-45ade1b1f1d8" CvTextArea="24, 190, 32, 11" CvTextArgument="Office:" CvType="Text" DesignTimeRectangle="25, 188, 32, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblOffice' tag='LABEL' type='' class='' aaname='Office:' check:innerText='Office:' /&gt;" Guid="a7db7f13-8070-46e5-918a-d225dfda9a70" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Zip Code'" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[postalCode]" Version="V4">
+                                              <uix:NTypeInto.EmptyFieldMode>
+                                                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                                                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_2" Value="SingleLine" />
+                                                </InArgument>
+                                              </uix:NTypeInto.EmptyFieldMode>
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-122.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="b23f4ed3-1c4e-428a-8891-e664caff3944" CvElementArea="94, 165, 82, 21" CvType="InputBox" DesignTimeRectangle="96, 167, 59, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='ellZipCode' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="aecab002-0858-4160-ab73-fd27ab7c234c" InformativeScreenshot="8be5a97d396fb93c97f36bfc1ac1c5c1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="b23f4ed3-1c4e-428a-8891-e664caff3944" CvTextArea="24, 168, 48, 13" CvTextArgument="Zip Code:" CvType="Text" DesignTimeRectangle="25, 166, 48, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Zip Code:' parentid='spnAfterName' tag='LABEL' type='' class='' check:innerText='Zip Code:' /&gt;" Guid="aac4e54a-33b3-4409-8d38-e5d644743821" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="10" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="tab" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b0ac99a0-fe1e-495e-b0e8-45e866a4a322">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                            <ui:UiElementExists DisplayName="Element Exists 'text Address'" Exists="[checkcity]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                              <ui:UiElementExists.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0f7cc90-6d3d-4c37-bf1e-12d84f249bc7" InformativeScreenshot="66f77a47a53d075ca470e8efe7600fa1" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Select - Zip Code - Google Chrome' /&gt;&lt;ctrl name='Select - Zip Code - Google Chrome' role='pane' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" TimeoutMS="30" WaitForReady="NONE" />
+                                              </ui:UiElementExists.Target>
+                                            </ui:UiElementExists>
+                                            <If Condition="[checkcity]" sap:VirtualizedContainerService.HintSize="450,427" sap2010:WorkflowViewState.IdRef="If_3">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[city]" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fax'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[fax]" Version="V4">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="fa1b4ff4-3c15-4d6d-adb2-eb606f2855ce" CvElementArea="94, 209, 107, 21" CvType="InputBox" DesignTimeRectangle="95, 210, 105, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtFax' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="92716907-32eb-4b4b-b5eb-0081fce867be" InformativeScreenshot="72b6ae3b031988e29d7af20dfc2eb47d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                      <uix:Target CVScreenId="fa1b4ff4-3c15-4d6d-adb2-eb606f2855ce" CvTextArea="24, 212, 22, 11" CvTextArgument="Fax:" CvType="Text" DesignTimeRectangle="25, 210, 21, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblFax' tag='LABEL' type='' class='' aaname='Fax:' check:innerText='Fax:' /&gt;" Guid="7c7f439e-b649-4409-84a4-44ce7e22e842" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Specialty'" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[taxdesc]" Version="V4">
+                                              <uix:NTypeInto.EmptyFieldMode>
+                                                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                                                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="SingleLine" />
+                                                </InArgument>
+                                              </uix:NTypeInto.EmptyFieldMode>
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-122.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="6b62c534-4648-45e4-b58e-515164124c89" CvElementArea="95, 313, 196, 20" CvType="InputBox" DesignTimeRectangle="95, 314, 195, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtSpecialty' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="e6e5cc3c-4d6c-4295-936e-ac8240dad974" InformativeScreenshot="8c8ecdcb8c60a718559482dd91ee7276.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="6b62c534-4648-45e4-b58e-515164124c89" CvTextArea="24, 316, 48, 13" CvTextArgument="Specialty:" CvType="Text" DesignTimeRectangle="25, 314, 48, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblSpecialty' tag='LABEL' type='' class='' aaname='Specialty:' check:innerText='Specialty:' /&gt;" Guid="7609604b-048a-4f7d-843c-83edaee24ea4" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Taxonomy'" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_27" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[taxcode]" Version="V4">
+                                              <uix:NTypeInto.EmptyFieldMode>
+                                                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                                                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="SingleLine" />
+                                                </InArgument>
+                                              </uix:NTypeInto.EmptyFieldMode>
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-122.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="5cafecf3-ee6f-4503-86aa-d75ff9b9b92a" CvElementArea="94, 338, 82, 20" CvType="InputBox" DesignTimeRectangle="95, 339, 80, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtTaxonomy' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="639f89ea-4af5-425d-8e16-e12f0b227607" InformativeScreenshot="b946efb52e638a524b29ddc0f70f3d86.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="5cafecf3-ee6f-4503-86aa-d75ff9b9b92a" CvTextArea="24, 342, 54, 12" CvTextArgument="Taxonomy:" CvType="Text" DesignTimeRectangle="25, 339, 53, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblTaxonomy' tag='LABEL' type='' class='' aaname='Taxonomy:' check:innerText='Taxonomy:' /&gt;" Guid="04033283-fbe3-4b33-b52b-a859ee9ea532" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'NPI'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[Ref_Id]" Version="V4">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-122.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="d63ef5e7-ac50-4877-894f-7b000318b46d" CvElementArea="94, 361, 82, 20" CvType="InputBox" DesignTimeRectangle="95, 362, 80, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtNPI' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="da247519-4778-4b91-bc86-4d82bfb422d5" InformativeScreenshot="b2a65a0f5dc2cf862cf270384a37e6ac.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="d63ef5e7-ac50-4877-894f-7b000318b46d" CvTextArea="24, 364, 22, 11" CvTextArgument="NPI:" CvType="Text" DesignTimeRectangle="25, 362, 21, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblNPI' tag='LABEL' type='' class='' aaname='NPI:' check:innerText='NPI:' /&gt;" Guid="1a5ed935-5a4d-46ff-9152-815dcd4671ec" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="NTypeInto_29" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Text="[Ref_Name]" Version="V4">
+                                              <uix:NTypeInto.EmptyFieldMode>
+                                                <InArgument x:TypeArguments="uix:NEmptyFieldMode">
+                                                  <Literal x:TypeArguments="uix:NEmptyFieldMode" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="SingleLine" />
+                                                </InArgument>
+                                              </uix:NTypeInto.EmptyFieldMode>
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="d85734c6-7abc-42dc-89a9-e680d3eb789b" CvElementArea="219, 77, 139, 20" CvType="InputBox" DesignTimeRectangle="221, 79, 114, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='ellName' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="c0babf87-6bd4-41ed-ae67-94b50fb499b6" InformativeScreenshot="9ff0dc68db92f2b1cd7a2f294b4d8e17.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                      <uix:Target CVScreenId="d85734c6-7abc-42dc-89a9-e680d3eb789b" CvTextArea="174, 80, 33, 11" CvTextArgument="Name:" CvType="Text" DesignTimeRectangle="175, 78, 32, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblName' tag='LABEL' type='' class='' aaname='Name:' check:innerText='Name:' /&gt;" Guid="2b5b14f3-524a-412e-944c-ca785201a7d6" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <uix:NTypeInto.VerifyOptions>
+                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                </uix:VerifyExecutionTypeIntoOptions>
+                                              </uix:NTypeInto.VerifyOptions>
+                                            </uix:NTypeInto>
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="450,169" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="tab" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b0ac99a0-fe1e-495e-b0e8-45e866a4a322">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="450,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Version="V4">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-137.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="30181b9a-dc56-434a-8200-0350f9879afe" CvElementArea="454, 75, 72, 22" CvTextArea="477, 80, 26, 11" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="455, 76, 70, 20" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='btnSave' tag='BUTTON' type='button' class='webbutton' aaname='Save' check:innerText='Save' /&gt;" Guid="2724b4eb-293e-4f9f-8786-3d3683bf2ba2" InformativeScreenshot="e8b00c150d199a8bd644759982fdbfa2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                      <uix:Target CVScreenId="30181b9a-dc56-434a-8200-0350f9879afe" CvTextArea="24, 80, 30, 11" CvTextArgument="Code:" CvType="Text" DesignTimeRectangle="25, 78, 29, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='lblCode' tag='LABEL' type='' class='' aaname='Code:' check:innerText='Code:' /&gt;" Guid="56fa0b0d-4e9e-4e55-8ab3-0fb63fd3663f" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                              <uix:NClick.VerifyOptions>
+                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionOptions.Retry>
+                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                </uix:VerifyExecutionOptions>
+                                              </uix:NClick.VerifyOptions>
+                                            </uix:NClick>
+                                            <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;N&quot;+colnumber.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="450,148" sap2010:WorkflowViewState.IdRef="WriteCell_20" SheetName="Sheet1" Text="Success" WorkbookPath="[file_path]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:WriteCell>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clear'" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a207182e-8328-4ca0-94e5-3bf1258e45dc" Version="V4">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://pm-wfe-122.advancedmd.com/practicemanager/masterfiles/mf_providers.html" CVScreenId="46a0efd7-087c-4ddd-a125-d47b17f34402" CvElementArea="454, 98, 72, 22" CvTextArea="476, 103, 28, 12" CvTextArgument="Clear" CvType="Button" DesignTimeRectangle="455, 99, 70, 20" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='btnClear' tag='BUTTON' type='button' class='webbutton' aaname='Clear' check:innerText='Clear' /&gt;" Guid="9c489773-dd8d-440f-b732-415fc2f9cd03" InformativeScreenshot="a299f265528a3defd71fe227f6156f34.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="46a0efd7-087c-4ddd-a125-d47b17f34402" CvElementArea="454, 75, 72, 22" CvTextArea="477, 80, 26, 11" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="455, 76, 70, 20" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='btnSave' tag='BUTTON' type='button' class='webbutton' aaname='Save' check:innerText='Save' /&gt;" Guid="6fe5c6ec-9ceb-4903-a8d4-d8f2da172bf8" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                              <uix:NClick.VerifyOptions>
+                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionOptions.Retry>
+                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                </uix:VerifyExecutionOptions>
+                                              </uix:NClick.VerifyOptions>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </uix:NApplicationCard.Body>
+                                      <uix:NApplicationCard.TargetApp>
+                                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGGSURBVDhPY6A64OHjk0zLyjvQM3H61+lzF/8DYRAbJAaSgyrDDqxs7AsnTpv7a9aCZf+BGv+2dPQ9r2/pfDRz/tJ/IDGQHEgNVDkqAEkAFf2bOnvRH1cPr1omJiZmkLi6ppYDSDMS/odhCMhpk6bP/T119sI/YuIS6lBhhtCImJ7uidOeoRkAdgmKd0D+A0mAbIYKMSgqKZuia0TGID1QpQwMwED6BvIzzNkgoK6hZd/Y1n0VhKfNXvgd3QBQwEKVMjCAQhoUYFAuBgDatgJZ85RZC36C9EClIQYgKwCG+p+27gl3fQOC60Gu4uPnFw8Oi+yIT0qbY2JmEQqyDMUAkBeQDUDGltZ2cVBlYAAyEORdFC/AAhEbjk1ImQlVBgaggAaJowQiLBqRNcYlpc52dHHL1tDSdoIqYwBFMSidYEQjCMASEswAY1PzYKgU2Nkgm0GaQWpwp0Zb+yJYUp4ya/7vpvaep9AA+wsSw5uUYQDkNJD/QIEECmkQBrFBYhjOphwwMAAA+3pGMrcB78kAAAAASUVORK5CYII=" InformativeScreenshot="49764cdad72fb279039e55ead509e6c2.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='mnuMFilesReferringProviders' title='Referring Provider' /&gt;" Title="Referring Provider" Url="https://pm-wfe-137.advancedmd.com/practicemanager/masterfiles/mf_providers.html" />
+                                      </uix:NApplicationCard.TargetApp>
+                                    </uix:NApplicationCard>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:WindowScope.Body>
+                            </ui:WindowScope>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:BrowserScope.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:BrowserScope>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+    </Sequence>
+  </Sequence>
+</Activity>
